@@ -24,5 +24,20 @@
 			</article>
 			{% endfor %}
 		</section>
+	    </section>
+	        <form action="" method="post">
+				{% csrf_token %}
+				<h2>¿Que le parecio nuestro Blog?</h2>
+			    <input type ="text" name="nombre" placeholder="Tu nombre"> <br>
+				Tu mensaje <br>
+			    <textarea name ="mensaje">
+
+				</textarea> <br>
+				<input type ="submit" name="enviar" value="Enviar Comentario">
+			    {% if mensaje %}
+				<h2>{{mensaje}}</h2>
+				{% endif %} 
+			</form>
+	    </section>		
 	</body>
 </html>
